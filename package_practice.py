@@ -22,8 +22,13 @@
 
 
 
-# __all__を用いてインポート対象の関数を限定してインポート
-from myfirstpackage.subdir import *
-myfunc() # これは実行できる。(__all__で指定指定しているから)
-myfunc2() # これは実行できない。(__all__で指定指定していないから)
+# # __all__を用いてインポート対象の関数を限定してインポート
+# from myfirstpackage.subdir import *
+# myfunc() # これは実行できる。(__all__で指定指定しているから)
+# myfunc2() # これは実行できない。(__all__で指定指定していないから)
+#
 
+
+# relative importの練習
+import myfirstpackage.subdir.module2
+myfirstpackage.subdir.module2.myfunc2()
